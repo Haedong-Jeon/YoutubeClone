@@ -8,8 +8,14 @@
 import UIKit
 
 class HomeController: UIViewController {
+    var headerView = CommonHeaderView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = .white
+        view.addSubview(headerView)
+        headerView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
     }
 }
