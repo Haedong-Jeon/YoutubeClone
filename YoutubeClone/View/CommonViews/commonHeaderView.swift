@@ -13,7 +13,7 @@ class CommonHeaderView: UIView {
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         imgView.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        imgView.image = #imageLiteral(resourceName: "youtube_icon")
+        imgView.image = #imageLiteral(resourceName: "free-icon-youtube-174883")
         return imgView
     }()
     var youtubeLabel: UILabel = {
