@@ -11,7 +11,6 @@ class MainController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        
         setTabs()
     }
 }

@@ -44,11 +44,13 @@ class PlayerView: UIView {
     var adMark: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        label.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        label.widthAnchor.constraint(equalToConstant: 45).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 20).isActive = true
         label.backgroundColor = .yellow
         label.textAlignment = .center
         label.textColor = .black
+        label.layer.cornerRadius = 5
+        label.clipsToBounds = true
         label.text = "광고"
         return label
     }()
@@ -119,8 +121,7 @@ class PlayerView: UIView {
         let uploaderInfoStack = UIStackView(arrangedSubviews: [adMark, uploaderNameLabel, watchCountLabel, uploadTimeLabel])
         uploaderInfoStack.translatesAutoresizingMaskIntoConstraints = false
         uploaderInfoStack.axis = .horizontal
-        
-        
+        uploaderInfoStack.spacing = 10
         
         //업로드 이름, 영상 설명등을 묶은 스택
         let movieInfoStack = UIStackView(arrangedSubviews: [titleLabel, subLabel, uploaderInfoStack, goMarketNowButton])
@@ -131,5 +132,13 @@ class PlayerView: UIView {
         movieInfoStack.topAnchor.constraint(equalTo: profile.topAnchor).isActive = true
         movieInfoStack.leftAnchor.constraint(equalTo: profile.rightAnchor, constant: 10).isActive = true
         movieInfoStack.rightAnchor.constraint(equalTo: verticalDotButton.leftAnchor, constant: -10).isActive = true
+    }
+    func redrawWithoutAd() {
+        adMark.isHidden = true
+        goMarketNowButton.isHidden = true
+    }
+    func redrawWithAd() {
+        uploadTimeLabel.isHidden = true
+        watchCountLabel.isHidden = true
     }
 }

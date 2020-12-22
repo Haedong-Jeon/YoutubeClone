@@ -13,7 +13,7 @@ extension MainController {
         self.tabBar.tintColor = .white
         self.tabBar.isTranslucent = false
         
-        let homeController = HomeController()
+        let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
         homeController.tabBarItem.image = #imageLiteral(resourceName: "home (1)")
         homeController.tabBarItem.title = "홈"
         
