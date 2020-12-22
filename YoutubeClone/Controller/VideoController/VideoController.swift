@@ -10,17 +10,11 @@ import AVFoundation
 
 class VideoController: UIViewController {
     var videoPlayerView = VideoPlayerView()
+    var viewTranslation = CGPoint(x: 0, y: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(dragDownToDismiss)))
         view.backgroundColor = youtubeDarkColor
-        
-        videoPlayerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(videoPlayerView)
-        
-        videoPlayerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        videoPlayerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        videoPlayerView.heightAnchor.constraint(equalToConstant: 300).isActive = true
-        
-        videoPlayerView.videoPlay()
+        drawVideoPlayer()
     }
 }

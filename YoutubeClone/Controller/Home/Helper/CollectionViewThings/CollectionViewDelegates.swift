@@ -34,8 +34,8 @@ extension HomeController {
         return CGSize(width: collectionView.frame.width, height: 300)
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let videoDetail = VideoController()
-        self.navigationController?.pushViewController(videoDetail, animated: true)
-        print("\(indexPath.row) touched!")
+        let videoController = VideoController()
+        videoController.modalPresentationStyle = .overCurrentContext
+        self.present(videoController, animated: true, completion: nil)
     }
 }
