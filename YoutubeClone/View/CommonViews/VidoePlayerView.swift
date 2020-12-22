@@ -11,7 +11,7 @@ import UIKit
 
 class VideoPlayerView: UIView {
     var player: AVPlayer?
-    let avPVC = AVPlayerViewController()
+    let playerController = AVPlayerViewController()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,16 +29,11 @@ class VideoPlayerView: UIView {
         let asset = AVAsset(url: url)
         let playerItem = AVPlayerItem(asset: asset)
         player = AVPlayer(playerItem: playerItem)
-//        let playerLayer = AVPlayerLayer(player: player)
-//
-//        playerLayer.frame = self.bounds
-//        playerLayer.videoGravity = .resizeAspect
-        
-//        self.layer.addSublayer(playerLayer)
-        avPVC.player = player
-        self.addSubview(avPVC.view)
-        avPVC.view.translatesAutoresizingMaskIntoConstraints = false
-        avPVC.view.frame = self.bounds
+
+        playerController.player = player
+        self.addSubview(playerController.view)
+        playerController.view.translatesAutoresizingMaskIntoConstraints = false
+        playerController.view.frame = self.bounds
         
         
     }
