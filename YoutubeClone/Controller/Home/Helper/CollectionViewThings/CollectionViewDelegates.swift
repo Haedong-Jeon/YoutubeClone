@@ -34,8 +34,7 @@ extension HomeController {
         return CGSize(width: collectionView.frame.width, height: 300)
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let videoController = VideoController()
-        videoController.modalPresentationStyle = .overCurrentContext
-        self.present(videoController, animated: true, completion: nil)
+        makeMiniPlayer()
+        goToVideoController()
     }
 }

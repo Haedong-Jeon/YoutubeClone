@@ -37,8 +37,6 @@ class VideoPlayerView: UIView {
         self.addSubview(playerVC.view)
         playerVC.view.translatesAutoresizingMaskIntoConstraints = false
         playerVC.view.frame = self.bounds
-        
-        
     }
     func videoPlay() {
         player?.play()
