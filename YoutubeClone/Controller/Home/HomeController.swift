@@ -11,11 +11,12 @@ let homeHeaderIdentifier = "reuse identifier for home tab header"
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     //MARK: - Properties
     var headerView = CommonHeaderView()
-    var playerView = PlayerView()
-    var playerView2 = PlayerView()
+    var playerView = thumbnailView()
+    var playerView2 = thumbnailView()
     //MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         view.backgroundColor = youtubeDarkColor
         //콜렉션 뷰 기본 설정
         collectionView.delegate = self

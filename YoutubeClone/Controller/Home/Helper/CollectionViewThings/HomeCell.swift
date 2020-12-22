@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeCell: UICollectionViewCell {
-    var playerView = PlayerView()
+    var playerView = thumbnailView()
     var isAd = false
     
     override init(frame: CGRect) {

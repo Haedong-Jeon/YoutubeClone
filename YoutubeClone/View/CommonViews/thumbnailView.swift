@@ -7,7 +7,8 @@
 
 import UIKit
 
-class PlayerView: UIView {
+class thumbnailView: UIView {
+
     var player: UIImageView = {
         var imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false

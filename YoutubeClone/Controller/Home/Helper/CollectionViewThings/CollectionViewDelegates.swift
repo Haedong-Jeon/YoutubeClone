@@ -13,9 +13,9 @@ extension HomeController {
             return UICollectionViewCell()
         }
         //광고
-        cell.playerView.redrawWithAd()
+        //cell.playerView.redrawWithAd()
         //일반 영상
-        //cell.playerView.redrawWithoutAd()
+        cell.playerView.redrawWithoutAd()
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -32,5 +32,10 @@ extension HomeController {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 300)
+    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let videoDetail = VideoController()
+        self.navigationController?.pushViewController(videoDetail, animated: true)
+        print("\(indexPath.row) touched!")
     }
 }

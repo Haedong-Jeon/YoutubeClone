@@ -32,6 +32,8 @@ extension MainController {
         savedController.tabBarItem.image = UIImage(systemName: "play.rectangle")
         savedController.tabBarItem.title = "보관함"
         
-        viewControllers = [homeController, searchController, uploadController, subscribeController, savedController]
+        let controllers = [homeController, searchController, uploadController, subscribeController, savedController]
+        //각 탭 안에 네비게이션 붙이기
+        viewControllers = controllers.map({UINavigationController(rootViewController: $0)})
     }
 }
