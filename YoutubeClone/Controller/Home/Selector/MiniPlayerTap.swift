@@ -10,8 +10,8 @@ import UIKit
 extension HomeController {
     @objc func miniPlayerTap() {
         let videoController = VideoController()
+        videoController.video = nowVideo
         videoController.modalPresentationStyle = .overCurrentContext
         self.present(videoController, animated: true, completion: nil)
-
     }
 }

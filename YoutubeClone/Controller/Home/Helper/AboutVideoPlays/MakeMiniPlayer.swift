@@ -8,8 +8,9 @@
 import UIKit
 
 extension HomeController {
-    func makeMiniPlayer() {
-        let miniPlayer = MiniVideoView()
+    func makeMiniPlayer(_ video: video) {
+        let miniPlayer = MiniVideoView(video: video, frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
+        miniPlayer.video = video
         miniPlayer.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(miniPlayer)
         miniPlayer.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true

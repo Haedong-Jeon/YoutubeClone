@@ -8,8 +8,9 @@
 import Foundation
 
 extension HomeController {
-    func goToVideoController() {
+    func goToVideoController(_ video: video) {
         let videoController = VideoController()
+        videoController.video = video
         videoController.modalPresentationStyle = .overCurrentContext
         self.present(videoController, animated: true, completion: nil)
     }

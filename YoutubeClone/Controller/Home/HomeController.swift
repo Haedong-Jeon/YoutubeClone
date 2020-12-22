@@ -12,7 +12,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     //MARK: - Properties
     var headerView = CommonHeaderView()
     var playerView = thumbnailView()
-    var playerView2 = thumbnailView()
+    var nowVideo: video?
     //MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         //콜렉션 뷰 기본 설정
         collectionView.delegate = self
         collectionView.register(HomeCell.self, forCellWithReuseIdentifier: homeCellReuseIdentifier)
-        collectionView.register(HomeHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: homeHeaderIdentifier);
+        collectionView.register(HomeHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: homeHeaderIdentifier)
         collectionView.backgroundColor = youtubeDarkColor
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {

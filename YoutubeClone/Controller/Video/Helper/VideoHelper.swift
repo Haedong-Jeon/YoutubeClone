@@ -9,10 +9,10 @@ import UIKit
 
 extension VideoController {
     func drawVideoPlayer() {
-        videoPlayerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(videoPlayerView)
-        videoPlayerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        videoPlayerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        videoPlayerView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        videoPlayerView!.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(videoPlayerView!)
+        videoPlayerView!.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        videoPlayerView!.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        videoPlayerView!.heightAnchor.constraint(equalToConstant: 300).isActive = true
     }
 }

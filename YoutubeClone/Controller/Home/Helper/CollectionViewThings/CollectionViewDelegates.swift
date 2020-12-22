@@ -12,10 +12,13 @@ extension HomeController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: homeCellReuseIdentifier, for: indexPath) as? HomeCell else {
             return UICollectionViewCell()
         }
-        //광고
-        //cell.playerView.redrawWithAd()
-        //일반 영상
-        cell.playerView.redrawWithoutAd()
+        if videos[indexPath.row].1 == .ad {
+            //광고
+            cell.playerView.redrawWithAd()
+        } else {
+            //일반 영상
+            cell.playerView.redrawWithoutAd()
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -28,13 +31,19 @@ extension HomeController {
         return header
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return videos.count
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 300)
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        makeMiniPlayer()
-        goToVideoController()
+        view.subviews.forEach({
+            if $0 is MiniVideoView {
+                $0.removeFromSuperview()
+            }
+        })
+        nowVideo = videos[indexPath.row]
+        goToVideoController(videos[indexPath.row])
+        makeMiniPlayer(videos[indexPath.row])
     }
 }
