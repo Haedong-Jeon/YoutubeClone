@@ -9,7 +9,7 @@ import UIKit
 
 extension MainController {
     func setTabs() {
-        self.tabBar.barTintColor = #colorLiteral(red: 0.156845212, green: 0.1568739116, blue: 0.1568388939, alpha: 1)
+        self.tabBar.barTintColor = youtubeDarkColor
         self.tabBar.tintColor = .white
         self.tabBar.isTranslucent = false
         

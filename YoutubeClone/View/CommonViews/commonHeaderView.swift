@@ -71,7 +71,7 @@ class CommonHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     func setInitialUI() {
-        backgroundColor = #colorLiteral(red: 0.156845212, green: 0.1568739116, blue: 0.1568388939, alpha: 1)
+        backgroundColor = youtubeDarkColor
         //유튜브 아이콘과 라벨을 묶은 스택
         let youtubeStack = UIStackView(arrangedSubviews: [youtubeIcon, youtubeLabel])
         youtubeStack.axis = .horizontal
