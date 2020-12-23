@@ -20,6 +20,7 @@ extension HomeController {
             //일반 영상
             cell.playerView.redrawWithoutAd()
         }
+        setThumbnailImg(to: cell.playerView.player, indexPath.row)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
