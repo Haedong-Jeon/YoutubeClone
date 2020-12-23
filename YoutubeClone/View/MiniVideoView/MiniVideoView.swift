@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MiniVideoView: UIView {
     //MARK: - Properties
@@ -67,5 +68,8 @@ class MiniVideoView: UIView {
     }
     @objc func close() {
         removeFromSuperview()
+    }
+    func setVideoPlayerTime(_ to: CMTime) {
+        videoPlayerView?.player?.currentItem?.seek(to: to, completionHandler: nil)
     }
 }

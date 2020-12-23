@@ -13,11 +13,7 @@ class VideoPlayerView: UIView {
     var video: video?
     var player: AVPlayer?
     let playerVC = AVPlayerViewController()
-//
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        setVideo()
-//    }
+
     init(video: video, frame: CGRect) {
         super.init(frame: frame)
         self.video = video
@@ -40,5 +36,11 @@ class VideoPlayerView: UIView {
     }
     func videoPlay() {
         player?.play()
+    }
+    func getPlayedTime() -> CMTime? {
+        return player?.currentItem?.currentTime()
+    }
+    func getTotalTime() -> CMTime? {
+        return player?.currentItem?.duration
     }
 }

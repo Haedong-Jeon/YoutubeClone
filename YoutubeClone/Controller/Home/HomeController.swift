@@ -13,6 +13,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     var headerView = CommonHeaderView()
     var playerView = thumbnailView()
     var nowVideo: video?
+    var miniPlayer: MiniVideoView?
     //MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()

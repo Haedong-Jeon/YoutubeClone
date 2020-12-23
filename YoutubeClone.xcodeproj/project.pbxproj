@@ -31,6 +31,7 @@
 		E92678012590CD400013CFD7 /* UploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92678002590CD400013CFD7 /* UploadController.swift */; };
 		E92678052590CD720013CFD7 /* SubscribeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92678042590CD720013CFD7 /* SubscribeController.swift */; };
 		E92678082590CD900013CFD7 /* SavedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92678072590CD900013CFD7 /* SavedController.swift */; };
+		E93CD66B2592CCCF0035604E /* ControlMiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CD66A2592CCCF0035604E /* ControlMiniPlayer.swift */; };
 		E94A4A2B259189F9001A8FFD /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A4A2A259189F9001A8FFD /* HomeHeader.swift */; };
 		E94A4A3125919379001A8FFD /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A4A3025919378001A8FFD /* VideoController.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		E92678002590CD400013CFD7 /* UploadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadController.swift; sourceTree = "<group>"; };
 		E92678042590CD720013CFD7 /* SubscribeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeController.swift; sourceTree = "<group>"; };
 		E92678072590CD900013CFD7 /* SavedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedController.swift; sourceTree = "<group>"; };
+		E93CD66A2592CCCF0035604E /* ControlMiniPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMiniPlayer.swift; sourceTree = "<group>"; };
 		E94A4A2A259189F9001A8FFD /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		E94A4A3025919378001A8FFD /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 			children = (
 				E905B2292591C2AC00A9D2AF /* MakeMiniPlayer.swift */,
 				E905B22D2591C31D00A9D2AF /* GoToVideoDetail.swift */,
+				E93CD66A2592CCCF0035604E /* ControlMiniPlayer.swift */,
 			);
 			path = AboutVideoPlays;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				E90E18A2259180B200E3F97A /* HomeCell.swift in Sources */,
 				E905B2182591BAB500A9D2AF /* VideoHelper.swift in Sources */,
 				E92677CE2590CB840013CFD7 /* AppDelegate.swift in Sources */,
+				E93CD66B2592CCCF0035604E /* ControlMiniPlayer.swift in Sources */,
 				E92677D02590CB840013CFD7 /* SceneDelegate.swift in Sources */,
 				E905B21F2591BE0500A9D2AF /* MiniVideoView.swift in Sources */,
 				E94A4A3125919379001A8FFD /* VideoController.swift in Sources */,

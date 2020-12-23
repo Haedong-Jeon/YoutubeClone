@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 enum VideoType {
     case normal
     case ad
@@ -19,3 +20,5 @@ let thirdURL = URL(string:"https://file-examples-com.github.io/uploads/2017/04/f
 let fourthURL = URL(string:"https://youtu.be/qaJw6lqGFew")!
 
 var videos = [(firstURL, VideoType.normal), (secondURL, VideoType.normal), (thirdURL, VideoType.ad), (fourthURL, VideoType.normal)]
+
+var playTime: CMTime?

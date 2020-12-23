@@ -37,11 +37,7 @@ extension HomeController {
         return CGSize(width: collectionView.frame.width, height: 300)
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        view.subviews.forEach({
-            if $0 is MiniVideoView {
-                $0.removeFromSuperview()
-            }
-        })
+        removeMiniPlayer()
         nowVideo = videos[indexPath.row]
         goToVideoController(videos[indexPath.row])
         makeMiniPlayer(videos[indexPath.row])
