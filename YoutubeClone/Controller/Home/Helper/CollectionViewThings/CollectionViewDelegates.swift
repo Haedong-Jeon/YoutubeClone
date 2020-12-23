@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 extension HomeController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -39,7 +40,11 @@ extension HomeController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         removeMiniPlayer()
         nowVideo = videos[indexPath.row]
-        goToVideoController(videos[indexPath.row])
-        makeMiniPlayer(videos[indexPath.row])
+        goToVideoController(videos[indexPath.row], indexPath)
+    }
+}
+extension HomeController: VideoTimeDelegate {
+    func makeMiniPlayer(_ index: Int) {
+        makeMiniPlayer(videos[index])
     }
 }

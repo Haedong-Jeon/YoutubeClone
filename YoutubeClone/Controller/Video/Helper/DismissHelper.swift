@@ -21,8 +21,6 @@ extension VideoController {
                     self.view.transform = .identity
                 }
             } else {
-                playTime = videoPlayerView?.getPlayedTime()// 미니 플레이어가 됐을 때 영상을 이어서 보도록.
-                print("current play time is \(playTime!)")
                 dismiss(animated: true, completion: nil)
             }
         default:

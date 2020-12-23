@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 extension HomeController {
     func makeMiniPlayer(_ video: video) {
@@ -17,6 +18,5 @@ extension HomeController {
         miniPlayer!.heightAnchor.constraint(equalToConstant: 50).isActive = true
         miniPlayer!.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         miniPlayer!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(miniPlayerTap)))
-        
     }
 }

@@ -67,6 +67,8 @@ class MiniVideoView: UIView {
         closeButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
     }
     @objc func close() {
+        videoPlayerView?.player?.pause()
+        videoPlayerView?.player = nil
         removeFromSuperview()
     }
     func setVideoPlayerTime(_ to: CMTime) {

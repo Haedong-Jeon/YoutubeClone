@@ -28,19 +28,12 @@ class VideoPlayerView: UIView {
         
         let asset = AVAsset(url: url)
         let playerItem = AVPlayerItem(asset: asset)
+        guard let startTime = video?.playedTime else { return }
         player = AVPlayer(playerItem: playerItem)
         playerVC.player = player
+        playerVC.player?.seek(to: startTime)
         self.addSubview(playerVC.view)
         playerVC.view.translatesAutoresizingMaskIntoConstraints = false
         playerVC.view.frame = self.bounds
-    }
-    func videoPlay() {
-        player?.play()
-    }
-    func getPlayedTime() -> CMTime? {
-        return player?.currentItem?.currentTime()
-    }
-    func getTotalTime() -> CMTime? {
-        return player?.currentItem?.duration
     }
 }
